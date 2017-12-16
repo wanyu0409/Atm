@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private final static int REQUEST_INFO = 105;
     boolean logon = false;
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(resultCode, resultCode, data);
@@ -43,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     String phone = data.getStringExtra("EXTRA_PHONE");
                     Toast.makeText(this, "Nickame" + nickname, Toast.LENGTH_LONG).show();
                     Toast.makeText(this, "Phone" + phone, Toast.LENGTH_LONG).show();
-
                 }
+                break;
         }
     }
 
