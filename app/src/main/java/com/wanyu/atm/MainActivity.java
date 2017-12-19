@@ -52,13 +52,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         startActivity(new Intent(this, UserInfoActivity.class));
-
         if (!logon){
             Intent intent = new Intent(this, LoginActivity.class);
             //startActivity(intent);
             startActivityForResult(intent, REQUEST_LOGIN);
         }
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -67,10 +65,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        //.setAction("Action", null).show();
+                Intent userinfo = new Intent(MainActivity.this, UserInfoActivity.class);
+                startActivityForResult(userinfo, REQUEST_INFO);
             }
         });
+
     }
 
     @Override
