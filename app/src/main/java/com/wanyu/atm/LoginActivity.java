@@ -29,8 +29,8 @@ public class LoginActivity extends AppCompatActivity {
         String userid = edUserid.getText().toString();
         String passwd = edPasswd.getText().toString();
         if ("jack".equals(userid) && "1234".equals(passwd)){
-            SharedPreferences setting = getSharedPreferences("atm", MODE_PRIVATE);
-            setting.edit().putString("PREF_USERID", userid).commit();
+//            SharedPreferences setting = getSharedPreferences("atm", MODE_PRIVATE);
+//            setting.edit().putString("PREF_USERID", userid).commit();
             //getIntent().putExtra("LOGIN_USERID", userid);
             getIntent().putExtra("LOGIN_USERID", userid);
             getIntent().putExtra("LOGIN_PASSWD", passwd);

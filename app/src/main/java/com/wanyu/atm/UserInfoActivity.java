@@ -15,7 +15,7 @@ public class UserInfoActivity extends AppCompatActivity {
     private EditText edNickname;
     private EditText edPhone;
     private Spinner ages;
-    private String TAG;
+    private String TAG = UserInfoActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
