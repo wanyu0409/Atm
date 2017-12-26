@@ -1,5 +1,6 @@
 package com.wanyu.atm;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,11 +29,13 @@ public class UserInfoActivity extends AppCompatActivity {
         }
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, data);
         ages.setAdapter(adapter);
-
         /* String nickname = getSharedPreferences("info", MODE_PRIVATE).getString("NAME", "");
         String phone = getSharedPreferences("info", MODE_PRIVATE).getString("PHONE", "");
         edNickname.setText(nickname);
         edPhone.setText(phone);*/
+    }
+    public void addr (View view){
+        startActivity(new Intent(this, AddrActivity.class));
     }
     public void info (View view){
         Log.d(TAG, "back: " + ages.getSelectedItem().toString());
