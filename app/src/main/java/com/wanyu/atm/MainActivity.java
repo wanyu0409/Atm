@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -72,7 +74,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(userinfo, REQUEST_INFO);
             }
         });
-
+        //listview
+        ListView listView = (ListView) findViewById(R.id.listView);
+        final String[] data = {"AAA", "BBB", "CCC"};
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, data);
+        listView.setAdapter(arrayAdapter);
     }
 
     @Override
